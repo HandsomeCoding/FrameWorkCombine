@@ -1,0 +1,76 @@
+server:
+  port: 8899
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      url: jdbc:mysql://192.168.0.136:3306/sales_commercial?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=true
+      username: root
+      password: root
+      filters: wall
+      maxActive: 20
+      initialSize: 1
+      maxWait: 60000
+      minIdle: 1
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: select 'x'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxOpenPreparedStatements: 20
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  servlet:
+    multipart:
+      max-request-size: 1024MB
+      max-file-size: 200MB
+mybatis-plus:
+  mapper-locations: classpath:mapping/*/*.xml
+  plobal-config:
+    db-config:
+      field-strategy: not_empty
+      id-type: input
+      db-type: mysql
+    supper-mapper-class: com.baomidou.mybatisplus.core.mapper.BaseMapper
+redis:
+  maxIdle: 10
+  maxTotal: 10
+  min_idle: 5
+  testWhileIdle: false
+  port: 6379
+  host: 47.98.182.16
+  auth: hbte
+  connectTimeout: 3000
+idgen:
+  workId: 1
+  datacenterId: 1
+session:
+  timeout: 3000
+logging:
+  config: classpath:logback-spring.xml
+minio:
+  access-key: ilovehbte-123
+  secret-key: DXQ2uc7u8lYTmzaD
+  url: 33952i2l39.zicp.vip
+  region: cn
+  port: 32507
+
+# minIO doc 存储 bucket
+doc:
+  bucket: attach
+  # 文件预览的线上对外的服务器地址
+  onlineKkfileUrl: http://192.168.0.133:8012/onlinePreview?url=
+  # 本机/项目上线的地址
+  innerPreviewUrl: http://192.168.2.226:9095/marketing
+swaggerbox:
+  scan-package: com.hbte.sharp
+  title: "saas平台"
+  description: "后台文档"
+  version: "1.0-beta"
+  enable: true
+  response-messages: "100#操作成功&101#业务自定义异常&102#未知异常服务器异常&103#空异常&104#登录超时"
+
+platform:
+  url: http://192.168.0.133:9095/platform/
+  id: 1
