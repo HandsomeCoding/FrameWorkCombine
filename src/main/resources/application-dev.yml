@@ -40,7 +40,7 @@ redis:
   testWhileIdle: false
   port:
   host:
-  auth: hbte
+  auth:
   connectTimeout: 3000
 idgen:
   workId: 1
@@ -58,15 +58,15 @@ minio:
 
 # minIO doc 存储 bucket
 doc:
-  bucket: attach
+  bucket:
   # 文件预览的线上对外的服务器地址
   onlineKkfileUrl:
   # 本机/项目上线的地址
   innerPreviewUrl:
 swaggerbox:
   scan-package:
-  title: "saas平台"
-  description: "后台文档"
+  title:
+  description:
   version: "1.0-beta"
   enable: true
   response-messages: "100#操作成功&101#业务自定义异常&102#未知异常服务器异常&103#空异常&104#登录超时"
