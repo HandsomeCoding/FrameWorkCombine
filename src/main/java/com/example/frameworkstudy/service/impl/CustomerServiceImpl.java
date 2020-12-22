@@ -1,9 +1,9 @@
 package com.example.frameworkstudy.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.store.tianmao.entity.Customer;
-import com.store.tianmao.mapper.CustomerMapper;
-import com.store.tianmao.service.CustomerService;
+import com.example.frameworkstudy.entity.Customer;
+import com.example.frameworkstudy.mapper.CustomerMapper;
+import com.example.frameworkstudy.service.CustomerService;
 import org.springframework.stereotype.Service;
 
 /**

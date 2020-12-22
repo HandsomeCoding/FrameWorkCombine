@@ -1,7 +1,7 @@
 package com.example.frameworkstudy.mapper;
 
-import com.store.tianmao.entity.ProductBase;
-import org.apache.ibatis.annotations.Mapper;
+import com.example.frameworkstudy.entity.ProductBase;
+ import org.apache.ibatis.annotations.Mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 

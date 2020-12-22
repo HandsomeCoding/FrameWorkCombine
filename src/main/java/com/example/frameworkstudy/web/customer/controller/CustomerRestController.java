@@ -1,9 +1,10 @@
 package com.example.frameworkstudy.web.customer.controller;
 
-import com.store.tianmao.common.Response;
-import com.store.tianmao.handler.ErrorHandler;
-import com.store.tianmao.util.Helper;
-import com.store.tianmao.util.RedisUtil;
+import com.example.frameworkstudy.common.Response;
+import com.example.frameworkstudy.handler.ErrorHandler;
+
+import com.example.frameworkstudy.util.Helper;
+import com.example.frameworkstudy.util.RedisUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.stereotype.Controller;

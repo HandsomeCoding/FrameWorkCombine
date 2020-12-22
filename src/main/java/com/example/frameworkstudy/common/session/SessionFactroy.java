@@ -3,7 +3,7 @@ package com.example.frameworkstudy.common.session;
 
 
 
-import com.store.tianmao.exception.SessionException;
+import com.example.frameworkstudy.exception.SessionException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

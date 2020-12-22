@@ -2,8 +2,10 @@ package com.example.frameworkstudy.util;
 
 
 
-import com.store.tianmao.common.Const;
-import com.store.tianmao.common.Response;
+
+
+import com.example.frameworkstudy.common.Const;
+import com.example.frameworkstudy.common.Response;
 
 import java.util.Random;
 import java.util.UUID;

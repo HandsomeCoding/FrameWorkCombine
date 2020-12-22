@@ -1,6 +1,6 @@
 package com.example.frameworkstudy.web.customer.controller;
 
-import com.store.tianmao.handler.ErrorHandler;
+import com.example.frameworkstudy.handler.ErrorHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.validation.annotation.Validated;
 

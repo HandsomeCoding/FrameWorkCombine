@@ -1,7 +1,7 @@
 package com.example.frameworkstudy.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.store.tianmao.entity.Customer;
+import com.example.frameworkstudy.entity.Customer;
 
 /**
  * <p>

@@ -2,11 +2,11 @@ package com.example.frameworkstudy.handler;
 
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.store.tianmao.common.PageCons;
-import com.store.tianmao.common.session.IdGenerator;
-import com.store.tianmao.common.session.SessionFactroy;
-import com.store.tianmao.util.AntiSQLFilter;
-import com.store.tianmao.util.TypeUtils;
+import com.example.frameworkstudy.common.PageCons;
+import com.example.frameworkstudy.common.session.IdGenerator;
+import com.example.frameworkstudy.common.session.SessionFactroy;
+import com.example.frameworkstudy.util.AntiSQLFilter;
+import com.example.frameworkstudy.util.TypeUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.servlet.http.HttpServletRequest;

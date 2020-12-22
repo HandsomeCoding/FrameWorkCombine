@@ -2,8 +2,9 @@ package com.example.frameworkstudy.common.cache;
 
 
 
-import com.store.tianmao.exception.CacheNotFoundException;
-import com.store.tianmao.exception.ServiceException;
+
+import com.example.frameworkstudy.exception.CacheNotFoundException;
+import com.example.frameworkstudy.exception.ServiceException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

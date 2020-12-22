@@ -2,7 +2,7 @@ package com.example.frameworkstudy.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
-import com.store.tianmao.util.convert.Convert;
+mport com.example.frameworkstudy.util.convert.Convert;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.io.Serializable;

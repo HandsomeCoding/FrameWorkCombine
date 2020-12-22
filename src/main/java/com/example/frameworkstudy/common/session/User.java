@@ -2,8 +2,10 @@ package com.example.frameworkstudy.common.session;
 
 
 
-import com.store.tianmao.vo.SysDept;
-import com.store.tianmao.vo.SysUserLoginVo;
+
+
+import com.example.frameworkstudy.vo.SysDept;
+import com.example.frameworkstudy.vo.SysUserLoginVo;
 
 import java.util.List;
 

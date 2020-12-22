@@ -2,9 +2,9 @@ package com.example.frameworkstudy.util.convert;
 
 import com.baomidou.mybatisplus.core.toolkit.ClassUtils;
 import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
-import com.store.tianmao.common.modelmapper.jdk8.Jdk8Module;
-import com.store.tianmao.common.modelmapper.jsr310.Jsr310Module;
-import com.store.tianmao.common.modelmapper.jsr310.Jsr310ModuleConfig;
+import com.example.frameworkstudy.common.modelmapper.jdk8.Jdk8Module;
+import com.example.frameworkstudy.common.modelmapper.jsr310.Jsr310Module;
+import com.example.frameworkstudy.common.modelmapper.jsr310.Jsr310ModuleConfig;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.cglib.beans.BeanMap;
