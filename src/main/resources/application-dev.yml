@@ -2,9 +2,9 @@ server:
   port: 8899
 spring:
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource
+    type:
     druid:
-      url: jdbc:mysql://192.168.0.136:3306/sales_commercial?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=true
+      url:
       username: root
       password: root
       filters: wall
@@ -38,8 +38,8 @@ redis:
   maxTotal: 10
   min_idle: 5
   testWhileIdle: false
-  port: 6379
-  host: 47.98.182.16
+  port:
+  host:
   auth: hbte
   connectTimeout: 3000
 idgen:
@@ -50,21 +50,21 @@ session:
 logging:
   config: classpath:logback-spring.xml
 minio:
-  access-key: ilovehbte-123
-  secret-key: DXQ2uc7u8lYTmzaD
-  url: 33952i2l39.zicp.vip
-  region: cn
-  port: 32507
+  access-key:
+  secret-key:
+  url:
+  region:
+  port:
 
 # minIO doc 存储 bucket
 doc:
   bucket: attach
   # 文件预览的线上对外的服务器地址
-  onlineKkfileUrl: http://192.168.0.133:8012/onlinePreview?url=
+  onlineKkfileUrl:
   # 本机/项目上线的地址
-  innerPreviewUrl: http://192.168.2.226:9095/marketing
+  innerPreviewUrl:
 swaggerbox:
-  scan-package: com.hbte.sharp
+  scan-package:
   title: "saas平台"
   description: "后台文档"
   version: "1.0-beta"
@@ -72,5 +72,5 @@ swaggerbox:
   response-messages: "100#操作成功&101#业务自定义异常&102#未知异常服务器异常&103#空异常&104#登录超时"
 
 platform:
-  url: http://192.168.0.133:9095/platform/
-  id: 1
+  url:
+  id:
