@@ -1,14 +1,14 @@
 package com.example.frameworkstudy.util;
 
+import com.example.frameworkstudy.entity.Customer;
+import com.example.frameworkstudy.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import javax.annotation.PostConstruct;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -21,6 +21,29 @@ import java.util.concurrent.TimeUnit;
 public class RedisUtil {
     @Autowired
     private RedisTemplate<String, Object> redisTemplate;
+
+    @Autowired
+    private CustomerService customerService;
+
+
+    /**
+     * 主要是将客户表里面的数据加载到redis里面
+     * 只是一种JSR-250的规范，当bean创建完成的时候，会后置执行@PostConstruct修饰的方法啊
+     */
+    //这个是java的注解，表示在spring初始化的时候会调用这个方法
+    //根据度娘所得，Bean初始化中的执行顺序  constructor(构造方法) ->@Autowired(依赖注入) ->@PostConstruct(注释的方法)
+    @PostConstruct
+    public void reloadCustomer() {
+        List<Customer> list = customerService.lambdaQuery().list();
+        Map<String, Object> customerHashMap = new HashMap<String, Object>();
+        if (list != null && list.size() > 0) {
+            list.forEach(s->{
+                customerHashMap.put(s.getId()+"",s);
+            });
+        }
+        hmset("customer",customerHashMap,3600);
+
+    }
 
 
     //=============================common========================================
@@ -172,7 +195,8 @@ public class RedisUtil {
      * @return 值
      */
     public Object hget(String key, String item) {
-        return redisTemplate.opsForHash().get(key, item);
+        Object o = redisTemplate.opsForHash().get(key, item);
+        return o;
     }
 
     /**
